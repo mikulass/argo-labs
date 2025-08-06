@@ -1,0 +1,36 @@
+customresourcedefinition.apiextensions.k8s.io/analysisruns.argoproj.io created
+customresourcedefinition.apiextensions.k8s.io/analysistemplates.argoproj.io created
+customresourcedefinition.apiextensions.k8s.io/clusteranalysistemplates.argoproj.io created
+customresourcedefinition.apiextensions.k8s.io/experiments.argoproj.io created
+customresourcedefinition.apiextensions.k8s.io/rollouts.argoproj.io created
+serviceaccount/argo-rollouts created
+clusterrole.rbac.authorization.k8s.io/argo-rollouts created
+clusterrole.rbac.authorization.k8s.io/argo-rollouts-aggregate-to-admin created
+clusterrole.rbac.authorization.k8s.io/argo-rollouts-aggregate-to-edit created
+clusterrole.rbac.authorization.k8s.io/argo-rollouts-aggregate-to-view created
+clusterrolebinding.rbac.authorization.k8s.io/argo-rollouts created
+configmap/argo-rollouts-config created
+secret/argo-rollouts-notification-secret created
+service/argo-rollouts-metrics created
+deployment.apps/argo-rollouts created
+
+argo-labs git:(main) kubectl api-resources | grep -i argo
+
+NAME                                SHORTNAMES                                      APIVERSION                        NAMESPACED   KIND
+analysisruns                        ar                                              argoproj.io/v1alpha1              true         AnalysisRun
+analysistemplates                   at                                              argoproj.io/v1alpha1              true         AnalysisTemplate
+clusteranalysistemplates            cat                                             argoproj.io/v1alpha1              false        ClusterAnalysisTemplate
+clusterworkflowtemplates            clusterwftmpl,cwft                              argoproj.io/v1alpha1              false        ClusterWorkflowTemplate
+cronworkflows                       cwf,cronwf                                      argoproj.io/v1alpha1              true         CronWorkflow
+eventbus                            eb                                              argoproj.io/v1alpha1              true         EventBus
+eventsources                        es                                              argoproj.io/v1alpha1              true         EventSource
+experiments                         exp                                             argoproj.io/v1alpha1              true         Experiment
+rollouts                            ro                                              argoproj.io/v1alpha1              true         Rollout
+sensors                             sn                                              argoproj.io/v1alpha1              true         Sensor
+workflowartifactgctasks             wfat                                            argoproj.io/v1alpha1              true         WorkflowArtifactGCTask
+workfloweventbindings               wfeb                                            argoproj.io/v1alpha1              true         WorkflowEventBinding
+workflows                           wf                                              argoproj.io/v1alpha1              true         Workflow
+workflowtaskresults                                                                 argoproj.io/v1alpha1              true         WorkflowTaskResult
+workflowtasksets                    wfts                                            argoproj.io/v1alpha1              true         WorkflowTaskSet
+workflowtemplates                   wftmpl                                          argoproj.io/v1alpha1              true         WorkflowTemplate
+
